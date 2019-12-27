@@ -6,7 +6,7 @@ def notices_to_students():
     url = "http://nith.ac.in/?page_id=14888"
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html5lib') 
-    notice_students = []
+
     table = soup.find_all('table', {"align":"center"})#.tbody.find('tr') 
     table1 = table[0].find_all('tbody')
     table_fin = table1[0].find_all('tr')
