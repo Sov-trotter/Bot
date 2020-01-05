@@ -20,7 +20,7 @@ import requests
 from dateutil.parser import parse
 from bs4 import BeautifulSoup
 
-def past_events():
+def department_portfolio():
     url = portfolio()
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html5lib') 
