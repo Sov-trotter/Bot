@@ -31,7 +31,7 @@ def past_events():
     for table in f:
       c +=1
     print(c)
-    for i in range(0,7):
+    for i in range(0,c):
       print("\n\n\n\n\n\n\n")
       table = soup.find_all('table', )[i].tbody.findAll('tr')
       for element in table :
