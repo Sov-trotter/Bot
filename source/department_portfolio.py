@@ -19,7 +19,7 @@ def department_portfolio():
     url = portfolio()
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html5lib') 
-    past_event = []
+    portfolio_arr = []
     c=0
     table = soup.find_all('div' , {"id":"home"})
     f= table[0].find_all('table', {"class":"profilemain"})
@@ -31,7 +31,8 @@ def department_portfolio():
       for element in table :
          obj = {}
          tds=element.findAll('td')
-         obj['title']=tds[0].text
-         obj['name']=tds[2].text
-         print(obj['title'])
-         print(obj['name'].strip())
+         obj=tds[0].text +" : "+ tds[2].text 
+        #  portfolio_arr.append()
+         portfolio_arr.append(obj)
+    return portfolio_arr
+        
