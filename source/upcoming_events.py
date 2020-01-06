@@ -2,8 +2,8 @@ import requests
 from dateutil.parser import parse
 from bs4 import BeautifulSoup
 
-def upcom   ing_events():
-    url = "http://nith.ac.in/?page_id=23481"
+def upcoming_events():
+    url = "http://nith.ac.in/?page_id=23481";
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html5lib') 
     upcoming_event = []
